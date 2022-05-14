@@ -18,3 +18,14 @@
 2022-05-14 22:20:44.244 DEBUG 17360 --- [http-nio-8081-exec-9] m.s.mapper.ShopMapper.selectById         : <==      Total: 1
 2022-05-14 22:25:23.544  INFO 17360 --- [SpringApplicationShutdownHook] com.alibaba.druid.pool.DruidDataSource   : {dataSource-1} closing ...
 2022-05-14 22:25:23.548  INFO 17360 --- [SpringApplicationShutdownHook] com.alibaba.druid.pool.DruidDataSource   : {dataSource-1} closed
+2022-05-14 22:26:09.955  INFO 1044 --- [main] gBootRedisHmdpRedisUtilsApplicationTests : Starting SpringBootRedisHmdpRedisUtilsApplicationTests using Java 16.0.2 on mao with PID 1044 (started by mao in H:\程序\大三下期\spring_boot_redis_hmdp_redis工具类)
+2022-05-14 22:26:09.957 DEBUG 1044 --- [main] gBootRedisHmdpRedisUtilsApplicationTests : Running with Spring Boot v2.6.7, Spring v5.3.19
+2022-05-14 22:26:09.958  INFO 1044 --- [main] gBootRedisHmdpRedisUtilsApplicationTests : The following 1 profile is active: "dev"
+2022-05-14 22:26:11.056  INFO 1044 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode!
+2022-05-14 22:26:11.061  INFO 1044 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2022-05-14 22:26:11.128  INFO 1044 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 32 ms. Found 0 Redis repository interfaces.
+2022-05-14 22:26:12.303  INFO 1044 --- [main] c.a.d.s.b.a.DruidDataSourceAutoConfigure : Init DruidDataSource
+2022-05-14 22:26:12.556  INFO 1044 --- [main] com.alibaba.druid.pool.DruidDataSource   : {dataSource-1} inited
+2022-05-14 22:26:15.134  INFO 1044 --- [main] gBootRedisHmdpRedisUtilsApplicationTests : Started SpringBootRedisHmdpRedisUtilsApplicationTests in 5.647 seconds (JVM running for 6.559)
+2022-05-14 22:26:15.721  INFO 1044 --- [SpringApplicationShutdownHook] com.alibaba.druid.pool.DruidDataSource   : {dataSource-1} closing ...
+2022-05-14 22:26:15.723  INFO 1044 --- [SpringApplicationShutdownHook] com.alibaba.druid.pool.DruidDataSource   : {dataSource-1} closed
