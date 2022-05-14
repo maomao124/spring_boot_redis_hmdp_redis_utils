@@ -1,0 +1,114 @@
+2022-05-14 22:13:52.677  INFO 10168 --- [http-nio-8081-exec-2] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2022-05-14 22:13:52.682  INFO 10168 --- [http-nio-8081-exec-2] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+2022-05-14 22:13:53.360 DEBUG 10168 --- [http-nio-8081-exec-2] m.s.mapper.ShopMapper.selectById         : ==>  Preparing: SELECT id,name,type_id,images,area,address,x,y,avg_price,sold,comments,score,open_hours,create_time,update_time FROM tb_shop WHERE id=?
+2022-05-14 22:13:53.377 DEBUG 10168 --- [http-nio-8081-exec-2] m.s.mapper.ShopMapper.selectById         : ==> Parameters: 1(Long)
+2022-05-14 22:13:53.412 DEBUG 10168 --- [http-nio-8081-exec-2] m.s.mapper.ShopMapper.selectById         : <==      Total: 1
+2022-05-14 22:15:33.628  INFO 10168 --- [SpringApplicationShutdownHook] com.alibaba.druid.pool.DruidDataSource   : {dataSource-1} closing ...
+2022-05-14 22:15:33.631  INFO 10168 --- [SpringApplicationShutdownHook] com.alibaba.druid.pool.DruidDataSource   : {dataSource-1} closed
+2022-05-14 22:15:38.574  INFO 2764 --- [restartedMain] SpringBootRedisHmdpRedisUtilsApplication : Starting SpringBootRedisHmdpRedisUtilsApplication using Java 16.0.2 on mao with PID 2764 (H:\程序\大三下期\spring_boot_redis_hmdp_redis工具类\target\classes started by mao in H:\程序\大三下期\spring_boot_redis_hmdp_redis工具类)
+2022-05-14 22:15:38.575 DEBUG 2764 --- [restartedMain] SpringBootRedisHmdpRedisUtilsApplication : Running with Spring Boot v2.6.7, Spring v5.3.19
+2022-05-14 22:15:38.575  INFO 2764 --- [restartedMain] SpringBootRedisHmdpRedisUtilsApplication : The following 1 profile is active: "dev"
+2022-05-14 22:15:38.609  INFO 2764 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2022-05-14 22:15:38.609  INFO 2764 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2022-05-14 22:15:39.112  INFO 2764 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode!
+2022-05-14 22:15:39.114  INFO 2764 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2022-05-14 22:15:39.136  INFO 2764 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 11 ms. Found 0 Redis repository interfaces.
+2022-05-14 22:15:39.554  INFO 2764 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8081 (http)
+2022-05-14 22:15:39.561  INFO 2764 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2022-05-14 22:15:39.561  INFO 2764 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.62]
+2022-05-14 22:15:39.622  INFO 2764 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2022-05-14 22:15:39.622  INFO 2764 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1012 ms
+2022-05-14 22:15:39.839  INFO 2764 --- [restartedMain] c.a.d.s.b.a.DruidDataSourceAutoConfigure : Init DruidDataSource
+2022-05-14 22:15:39.936  INFO 2764 --- [restartedMain] com.alibaba.druid.pool.DruidDataSource   : {dataSource-1} inited
+2022-05-14 22:15:40.778  INFO 2764 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2022-05-14 22:15:40.819  INFO 2764 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8081 (http) with context path ''
+2022-05-14 22:15:40.830  INFO 2764 --- [restartedMain] SpringBootRedisHmdpRedisUtilsApplication : Started SpringBootRedisHmdpRedisUtilsApplication in 2.593 seconds (JVM running for 3.175)
+2022-05-14 22:15:46.271  INFO 2764 --- [http-nio-8081-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2022-05-14 22:15:46.271  INFO 2764 --- [http-nio-8081-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2022-05-14 22:15:46.272  INFO 2764 --- [http-nio-8081-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+2022-05-14 22:15:46.299 DEBUG 2764 --- [http-nio-8081-exec-1] m.s.utils.RedisUtils                     : 执行方法
+2022-05-14 22:15:55.816 DEBUG 2764 --- [http-nio-8081-exec-3] m.s.utils.RedisUtils                     : 执行方法
+2022-05-14 22:15:56.556 DEBUG 2764 --- [http-nio-8081-exec-4] m.s.utils.RedisUtils                     : 执行方法
+2022-05-14 22:15:57.020 DEBUG 2764 --- [http-nio-8081-exec-6] m.s.utils.RedisUtils                     : 执行方法
+2022-05-14 22:15:57.302 DEBUG 2764 --- [http-nio-8081-exec-5] m.s.utils.RedisUtils                     : 执行方法
+2022-05-14 22:15:57.672 DEBUG 2764 --- [http-nio-8081-exec-7] m.s.utils.RedisUtils                     : 执行方法
+2022-05-14 22:15:59.624 DEBUG 2764 --- [http-nio-8081-exec-8] m.s.utils.RedisUtils                     : 执行方法
+2022-05-14 22:15:59.953 DEBUG 2764 --- [http-nio-8081-exec-9] m.s.utils.RedisUtils                     : 执行方法
+2022-05-14 22:16:00.825 DEBUG 2764 --- [http-nio-8081-exec-10] m.s.utils.RedisUtils                     : 执行方法
+2022-05-14 22:16:01.227 DEBUG 2764 --- [http-nio-8081-exec-2] m.s.utils.RedisUtils                     : 执行方法
+2022-05-14 22:16:01.615 DEBUG 2764 --- [http-nio-8081-exec-1] m.s.utils.RedisUtils                     : 执行方法
+2022-05-14 22:16:02.392 DEBUG 2764 --- [http-nio-8081-exec-3] m.s.utils.RedisUtils                     : 执行方法
+2022-05-14 22:16:02.706 DEBUG 2764 --- [http-nio-8081-exec-4] m.s.utils.RedisUtils                     : 执行方法
+2022-05-14 22:16:03.121 DEBUG 2764 --- [http-nio-8081-exec-6] m.s.utils.RedisUtils                     : 执行方法
+2022-05-14 22:16:03.502 DEBUG 2764 --- [http-nio-8081-exec-5] m.s.utils.RedisUtils                     : 执行方法
+2022-05-14 22:16:03.805 DEBUG 2764 --- [http-nio-8081-exec-7] m.s.utils.RedisUtils                     : 执行方法
+2022-05-14 22:16:04.214 DEBUG 2764 --- [http-nio-8081-exec-8] m.s.utils.RedisUtils                     : 执行方法
+2022-05-14 22:16:17.298 DEBUG 2764 --- [http-nio-8081-exec-9] m.s.utils.RedisUtils                     : 执行方法
+2022-05-14 22:16:17.519 DEBUG 2764 --- [http-nio-8081-exec-9] m.s.mapper.ShopMapper.selectById         : ==>  Preparing: SELECT id,name,type_id,images,area,address,x,y,avg_price,sold,comments,score,open_hours,create_time,update_time FROM tb_shop WHERE id=?
+2022-05-14 22:16:17.535 DEBUG 2764 --- [http-nio-8081-exec-9] m.s.mapper.ShopMapper.selectById         : ==> Parameters: 0(Long)
+2022-05-14 22:16:17.548 DEBUG 2764 --- [http-nio-8081-exec-9] m.s.mapper.ShopMapper.selectById         : <==      Total: 0
+2022-05-14 22:16:20.520 DEBUG 2764 --- [http-nio-8081-exec-10] m.s.utils.RedisUtils                     : 执行方法
+2022-05-14 22:16:22.293 DEBUG 2764 --- [http-nio-8081-exec-2] m.s.utils.RedisUtils                     : 执行方法
+2022-05-14 22:16:22.724 DEBUG 2764 --- [http-nio-8081-exec-1] m.s.utils.RedisUtils                     : 执行方法
+2022-05-14 22:16:23.194 DEBUG 2764 --- [http-nio-8081-exec-3] m.s.utils.RedisUtils                     : 执行方法
+2022-05-14 22:16:23.520 DEBUG 2764 --- [http-nio-8081-exec-4] m.s.utils.RedisUtils                     : 执行方法
+2022-05-14 22:16:23.957 DEBUG 2764 --- [http-nio-8081-exec-6] m.s.utils.RedisUtils                     : 执行方法
+2022-05-14 22:16:24.302 DEBUG 2764 --- [http-nio-8081-exec-5] m.s.utils.RedisUtils                     : 执行方法
+2022-05-14 22:16:24.638 DEBUG 2764 --- [http-nio-8081-exec-7] m.s.utils.RedisUtils                     : 执行方法
+2022-05-14 22:16:25.015 DEBUG 2764 --- [http-nio-8081-exec-8] m.s.utils.RedisUtils                     : 执行方法
+2022-05-14 22:16:25.379 DEBUG 2764 --- [http-nio-8081-exec-9] m.s.utils.RedisUtils                     : 执行方法
+2022-05-14 22:16:25.983 DEBUG 2764 --- [http-nio-8081-exec-10] m.s.utils.RedisUtils                     : 执行方法
+2022-05-14 22:16:26.394 DEBUG 2764 --- [http-nio-8081-exec-2] m.s.utils.RedisUtils                     : 执行方法
+2022-05-14 22:16:26.806 DEBUG 2764 --- [http-nio-8081-exec-1] m.s.utils.RedisUtils                     : 执行方法
+2022-05-14 22:16:27.200 DEBUG 2764 --- [http-nio-8081-exec-3] m.s.utils.RedisUtils                     : 执行方法
+2022-05-14 22:16:27.661 DEBUG 2764 --- [http-nio-8081-exec-4] m.s.utils.RedisUtils                     : 执行方法
+2022-05-14 22:16:28.105 DEBUG 2764 --- [http-nio-8081-exec-6] m.s.utils.RedisUtils                     : 执行方法
+2022-05-14 22:16:28.438 DEBUG 2764 --- [http-nio-8081-exec-5] m.s.utils.RedisUtils                     : 执行方法
+2022-05-14 22:16:29.958 DEBUG 2764 --- [http-nio-8081-exec-7] m.s.utils.RedisUtils                     : 执行方法
+2022-05-14 22:16:32.940 DEBUG 2764 --- [http-nio-8081-exec-8] m.s.utils.RedisUtils                     : 执行方法
+2022-05-14 22:16:36.292 DEBUG 2764 --- [http-nio-8081-exec-9] m.s.utils.RedisUtils                     : 执行方法
+2022-05-14 22:16:36.711 DEBUG 2764 --- [http-nio-8081-exec-10] m.s.utils.RedisUtils                     : 执行方法
+2022-05-14 22:16:37.014 DEBUG 2764 --- [http-nio-8081-exec-2] m.s.utils.RedisUtils                     : 执行方法
+2022-05-14 22:16:37.395 DEBUG 2764 --- [http-nio-8081-exec-1] m.s.utils.RedisUtils                     : 执行方法
+2022-05-14 22:16:37.899 DEBUG 2764 --- [http-nio-8081-exec-3] m.s.utils.RedisUtils                     : 执行方法
+2022-05-14 22:16:38.289 DEBUG 2764 --- [http-nio-8081-exec-4] m.s.utils.RedisUtils                     : 执行方法
+2022-05-14 22:16:38.815 DEBUG 2764 --- [http-nio-8081-exec-6] m.s.utils.RedisUtils                     : 执行方法
+2022-05-14 22:16:39.178 DEBUG 2764 --- [http-nio-8081-exec-5] m.s.utils.RedisUtils                     : 执行方法
+2022-05-14 22:16:39.508 DEBUG 2764 --- [http-nio-8081-exec-7] m.s.utils.RedisUtils                     : 执行方法
+2022-05-14 22:16:50.725  INFO 2764 --- [SpringApplicationShutdownHook] com.alibaba.druid.pool.DruidDataSource   : {dataSource-1} closing ...
+2022-05-14 22:16:50.728  INFO 2764 --- [SpringApplicationShutdownHook] com.alibaba.druid.pool.DruidDataSource   : {dataSource-1} closed
+2022-05-14 22:19:15.421  INFO 10788 --- [restartedMain] SpringBootRedisHmdpRedisUtilsApplication : Starting SpringBootRedisHmdpRedisUtilsApplication using Java 16.0.2 on mao with PID 10788 (H:\程序\大三下期\spring_boot_redis_hmdp_redis工具类\target\classes started by mao in H:\程序\大三下期\spring_boot_redis_hmdp_redis工具类)
+2022-05-14 22:19:15.421 DEBUG 10788 --- [restartedMain] SpringBootRedisHmdpRedisUtilsApplication : Running with Spring Boot v2.6.7, Spring v5.3.19
+2022-05-14 22:19:15.422  INFO 10788 --- [restartedMain] SpringBootRedisHmdpRedisUtilsApplication : The following 1 profile is active: "dev"
+2022-05-14 22:19:15.455  INFO 10788 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2022-05-14 22:19:15.455  INFO 10788 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2022-05-14 22:19:15.939  INFO 10788 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode!
+2022-05-14 22:19:15.940  INFO 10788 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2022-05-14 22:19:15.961  INFO 10788 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 11 ms. Found 0 Redis repository interfaces.
+2022-05-14 22:19:16.403  INFO 10788 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8081 (http)
+2022-05-14 22:19:16.409  INFO 10788 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2022-05-14 22:19:16.409  INFO 10788 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.62]
+2022-05-14 22:19:16.467  INFO 10788 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2022-05-14 22:19:16.467  INFO 10788 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1012 ms
+2022-05-14 22:19:16.680  INFO 10788 --- [restartedMain] c.a.d.s.b.a.DruidDataSourceAutoConfigure : Init DruidDataSource
+2022-05-14 22:19:16.775  INFO 10788 --- [restartedMain] com.alibaba.druid.pool.DruidDataSource   : {dataSource-1} inited
+2022-05-14 22:19:17.616  INFO 10788 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2022-05-14 22:19:17.658  INFO 10788 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8081 (http) with context path ''
+2022-05-14 22:19:17.668  INFO 10788 --- [restartedMain] SpringBootRedisHmdpRedisUtilsApplication : Started SpringBootRedisHmdpRedisUtilsApplication in 2.57 seconds (JVM running for 3.104)
+2022-05-14 22:19:32.106  INFO 10788 --- [SpringApplicationShutdownHook] com.alibaba.druid.pool.DruidDataSource   : {dataSource-1} closing ...
+2022-05-14 22:19:32.107  INFO 10788 --- [SpringApplicationShutdownHook] com.alibaba.druid.pool.DruidDataSource   : {dataSource-1} closed
+2022-05-14 22:19:37.112  INFO 17360 --- [restartedMain] SpringBootRedisHmdpRedisUtilsApplication : Starting SpringBootRedisHmdpRedisUtilsApplication using Java 16.0.2 on mao with PID 17360 (H:\程序\大三下期\spring_boot_redis_hmdp_redis工具类\target\classes started by mao in H:\程序\大三下期\spring_boot_redis_hmdp_redis工具类)
+2022-05-14 22:19:37.113 DEBUG 17360 --- [restartedMain] SpringBootRedisHmdpRedisUtilsApplication : Running with Spring Boot v2.6.7, Spring v5.3.19
+2022-05-14 22:19:37.113  INFO 17360 --- [restartedMain] SpringBootRedisHmdpRedisUtilsApplication : The following 1 profile is active: "dev"
+2022-05-14 22:19:37.145  INFO 17360 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2022-05-14 22:19:37.145  INFO 17360 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2022-05-14 22:19:37.640  INFO 17360 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode!
+2022-05-14 22:19:37.642  INFO 17360 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2022-05-14 22:19:37.664  INFO 17360 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 12 ms. Found 0 Redis repository interfaces.
+2022-05-14 22:19:38.093  INFO 17360 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8081 (http)
+2022-05-14 22:19:38.100  INFO 17360 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2022-05-14 22:19:38.100  INFO 17360 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.62]
+2022-05-14 22:19:38.156  INFO 17360 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2022-05-14 22:19:38.157  INFO 17360 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1011 ms
+2022-05-14 22:19:38.365  INFO 17360 --- [restartedMain] c.a.d.s.b.a.DruidDataSourceAutoConfigure : Init DruidDataSource
+2022-05-14 22:19:38.458  INFO 17360 --- [restartedMain] com.alibaba.druid.pool.DruidDataSource   : {dataSource-1} inited

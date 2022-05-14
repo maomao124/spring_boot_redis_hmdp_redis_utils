@@ -27,7 +27,7 @@ import java.util.function.Function;
  * Date(创建日期)： 2022/5/14
  * Time(创建时间)： 20:48
  * Version(版本): 1.0
- * Description(描述)： 无
+ * Description(描述)： redis工具类
  */
 
 @Slf4j
