@@ -38,3 +38,23 @@
 2022-05-14 21:45:43.590  INFO 10656 --- [restartedMain] SpringBootRedisHmdpRedisUtilsApplication : Started SpringBootRedisHmdpRedisUtilsApplication in 2.778 seconds (JVM running for 3.564)
 2022-05-14 21:45:48.557  INFO 10656 --- [SpringApplicationShutdownHook] com.alibaba.druid.pool.DruidDataSource   : {dataSource-1} closing ...
 2022-05-14 21:45:48.558  INFO 10656 --- [SpringApplicationShutdownHook] com.alibaba.druid.pool.DruidDataSource   : {dataSource-1} closed
+2022-05-14 21:56:53.142  INFO 13396 --- [restartedMain] SpringBootRedisHmdpRedisUtilsApplication : Starting SpringBootRedisHmdpRedisUtilsApplication using Java 16.0.2 on mao with PID 13396 (H:\程序\大三下期\spring_boot_redis_hmdp_redis工具类\target\classes started by mao in H:\程序\大三下期\spring_boot_redis_hmdp_redis工具类)
+2022-05-14 21:56:53.143 DEBUG 13396 --- [restartedMain] SpringBootRedisHmdpRedisUtilsApplication : Running with Spring Boot v2.6.7, Spring v5.3.19
+2022-05-14 21:56:53.143  INFO 13396 --- [restartedMain] SpringBootRedisHmdpRedisUtilsApplication : The following 1 profile is active: "dev"
+2022-05-14 21:56:53.177  INFO 13396 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2022-05-14 21:56:53.177  INFO 13396 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2022-05-14 21:56:53.671  INFO 13396 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode!
+2022-05-14 21:56:53.673  INFO 13396 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2022-05-14 21:56:53.693  INFO 13396 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 11 ms. Found 0 Redis repository interfaces.
+2022-05-14 21:56:54.119  INFO 13396 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8081 (http)
+2022-05-14 21:56:54.125  INFO 13396 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2022-05-14 21:56:54.126  INFO 13396 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.62]
+2022-05-14 21:56:54.183  INFO 13396 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2022-05-14 21:56:54.183  INFO 13396 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1005 ms
+2022-05-14 21:56:54.391  INFO 13396 --- [restartedMain] c.a.d.s.b.a.DruidDataSourceAutoConfigure : Init DruidDataSource
+2022-05-14 21:56:54.489  INFO 13396 --- [restartedMain] com.alibaba.druid.pool.DruidDataSource   : {dataSource-1} inited
+2022-05-14 21:56:55.308  INFO 13396 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2022-05-14 21:56:55.352  INFO 13396 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8081 (http) with context path ''
+2022-05-14 21:56:55.361  INFO 13396 --- [restartedMain] SpringBootRedisHmdpRedisUtilsApplication : Started SpringBootRedisHmdpRedisUtilsApplication in 2.542 seconds (JVM running for 3.082)
+2022-05-14 21:56:57.195  INFO 13396 --- [SpringApplicationShutdownHook] com.alibaba.druid.pool.DruidDataSource   : {dataSource-1} closing ...
+2022-05-14 21:56:57.196  INFO 13396 --- [SpringApplicationShutdownHook] com.alibaba.druid.pool.DruidDataSource   : {dataSource-1} closed

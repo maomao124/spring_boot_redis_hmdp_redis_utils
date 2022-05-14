@@ -6,6 +6,7 @@ import cn.hutool.json.JSONObject;
 import cn.hutool.json.JSONUtil;
 import lombok.extern.slf4j.Slf4j;
 import mao.spring_boot_redis_hmdp.dto.RedisData;
+import mao.spring_boot_redis_hmdp.entity.Shop;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.redis.core.StringRedisTemplate;
 
@@ -178,6 +179,89 @@ public class RedisUtils
         //返回
         return r;
     }
+
+    /**
+     * @param keyPrefix                      redisKey的前缀
+     * @param lockKeyPrefix                  锁的前缀
+     * @param id                             id
+     * @param type                           返回值的类型
+     * @param dbFallback                     查询数据库的函数
+     * @param expireTime                     过期时间
+     * @param timeUnit                       时间单位
+     * @param <R>                            返回值的类型
+     * @param <ID>                           id的类型
+     * @param maxTimeSecondsByCacheAvalanche this.set(redisKey, r,
+     *                                       timeUnit.toSeconds(expireTime)+getIntRandom(0,maxTimeSecondsByCacheAvalanche), TimeUnit.SECONDS);
+     * @return 泛型R
+     */
+    public <R, ID> R query(String keyPrefix, String lockKeyPrefix, ID id, Class<R> type,
+                           Function<ID, R> dbFallback, Long expireTime, TimeUnit timeUnit,
+                           Integer maxTimeSecondsByCacheAvalanche)
+    {
+        //获取redisKey
+        String redisKey = keyPrefix + id;
+        //从redis中查询信息，根据id
+        String json = stringRedisTemplate.opsForValue().get(redisKey);
+        //判断取出的数据是否为空
+        if (StrUtil.isNotBlank(json))
+        {
+            //不是空，redis里有，返回
+            return JSONUtil.toBean(json, type);
+        }
+        //是空串，不是null，返回
+        if (json != null)
+        {
+            return null;
+        }
+        //锁的key
+        String lockKey = lockKeyPrefix + id;
+
+        R r = null;
+        try
+        {
+            //获取互斥锁
+            boolean lock = tryLock(lockKey);
+            //判断锁是否获取成功
+            if (!lock)
+            {
+                //没有获取到锁
+                //200毫秒后再次获取
+                Thread.sleep(200);
+                //递归调用
+                return query(keyPrefix, lockKeyPrefix, id, type, dbFallback,
+                        expireTime, timeUnit, maxTimeSecondsByCacheAvalanche);
+            }
+            //得到了锁
+            //null，查数据库
+            r = dbFallback.apply(id);
+            //判断数据库里的信息是否为空
+            if (r == null)
+            {
+                //数据库也为空，缓存空值
+                this.set(redisKey, "",
+                        timeUnit.toSeconds(expireTime) + getIntRandom(0, maxTimeSecondsByCacheAvalanche),
+                        TimeUnit.SECONDS);
+                return null;
+            }
+            //存在，回写到redis里，设置随机的过期时间
+            this.set(redisKey, r,
+                    timeUnit.toSeconds(expireTime) + getIntRandom(0, maxTimeSecondsByCacheAvalanche),
+                    TimeUnit.SECONDS);
+        }
+        catch (InterruptedException e)
+        {
+            throw new RuntimeException(e);
+        }
+        finally
+        {
+            //释放锁
+            this.unlock(lockKey);
+        }
+        //返回数据
+        return r;
+    }
+
+
 
     /**
      * @param keyPrefix     redisKey的前缀
