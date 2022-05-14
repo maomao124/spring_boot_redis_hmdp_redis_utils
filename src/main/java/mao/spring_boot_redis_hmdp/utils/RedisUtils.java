@@ -6,8 +6,6 @@ import cn.hutool.json.JSONObject;
 import cn.hutool.json.JSONUtil;
 import lombok.extern.slf4j.Slf4j;
 import mao.spring_boot_redis_hmdp.dto.RedisData;
-import mao.spring_boot_redis_hmdp.entity.Shop;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.redis.core.StringRedisTemplate;
 
 import org.springframework.stereotype.Component;
@@ -181,6 +179,8 @@ public class RedisUtils
     }
 
     /**
+     * 查询数据，解决缓存穿透，互斥锁方法解决缓存击穿，解决缓存雪崩
+     *
      * @param keyPrefix                      redisKey的前缀
      * @param lockKeyPrefix                  锁的前缀
      * @param id                             id
@@ -261,7 +261,40 @@ public class RedisUtils
         return r;
     }
 
-
+    /**
+     * 更新数据
+     *
+     * @param id         要更新的主键
+     * @param data       要更新的对象
+     * @param keyPrefix  redis的key前缀
+     * @param dbFallback 更新数据库的函数，返回值要为Boolean类型
+     * @param <T>        要更新的对象的泛型
+     * @param <ID>       主键的类型
+     * @return boolean
+     */
+    public <T, ID> boolean update(ID id, T data, String keyPrefix, Function<T, Boolean> dbFallback)
+    {
+        //判断是否为空
+        if (id == null)
+        {
+            return false;
+        }
+        //不为空
+        //先更新数据库
+        boolean b = dbFallback.apply(data);
+        //更新失败，返回
+        if (!b)
+        {
+            return false;
+        }
+        //更新没有失败
+        //删除redis里的数据，下一次查询时自动添加进redis
+        //redisKey
+        String redisKey = keyPrefix + id;
+        stringRedisTemplate.delete(redisKey);
+        //返回响应
+        return true;
+    }
 
     /**
      * @param keyPrefix     redisKey的前缀
