@@ -12,6 +12,7 @@ import mao.spring_boot_redis_hmdp.entity.Shop;
 import mao.spring_boot_redis_hmdp.mapper.ShopMapper;
 import mao.spring_boot_redis_hmdp.service.IShopService;
 import mao.spring_boot_redis_hmdp.utils.RedisConstants;
+import mao.spring_boot_redis_hmdp.utils.RedisUtils;
 import org.springframework.data.redis.core.StringRedisTemplate;
 import org.springframework.stereotype.Service;
 
@@ -28,13 +29,18 @@ public class ShopServiceImpl extends ServiceImpl<ShopMapper, Shop> implements IS
     @Resource
     StringRedisTemplate stringRedisTemplate;
 
+    @Resource
+    private RedisUtils redisUtils;
+
 
     @Override
     public Result queryShopById(Long id)
     {
         //查询
         //Shop shop = this.queryWithMutex(id);
-        Shop shop = this.queryWithLogicalExpire(id);
+        //Shop shop = this.queryWithLogicalExpire(id);
+        Shop shop = redisUtils.query(RedisConstants.CACHE_SHOP_KEY, RedisConstants.LOCK_SHOP_KEY, id, Shop.class, this::getById,
+                RedisConstants.CACHE_SHOP_TTL, TimeUnit.MINUTES, 300);
         //判断
         if (shop == null)
         {
