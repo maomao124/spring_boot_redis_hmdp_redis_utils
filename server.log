@@ -1,5 +1,1 @@
-2022-05-14 22:13:52.677  INFO 10168 --- [http-nio-8081-exec-2] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
-2022-05-14 22:13:52.682  INFO 10168 --- [http-nio-8081-exec-2] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
-2022-05-14 22:13:53.360 DEBUG 10168 --- [http-nio-8081-exec-2] m.s.mapper.ShopMapper.selectById         : ==>  Preparing: SELECT id,name,type_id,images,area,address,x,y,avg_price,sold,comments,score,open_hours,create_time,update_time FROM tb_shop WHERE id=?
-2022-05-14 22:13:53.377 DEBUG 10168 --- [http-nio-8081-exec-2] m.s.mapper.ShopMapper.selectById         : ==> Parameters: 1(Long)
-2022-05-14 22:13:53.412 DEBUG 10168 --- [http-nio-8081-exec-2] m.s.mapper.ShopMapper.selectById         : <==      Total: 1
+2022-05-14 22:19:39.289  INFO 17360 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
